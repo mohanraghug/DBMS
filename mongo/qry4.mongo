@@ -1,0 +1,23 @@
+DBQuery.shellBatchSize = 10000000;
+db.B.aggregate ([
+{ 
+    $lookup : { 
+        from : "A",
+        localField : "B2",
+        foreignField : "A1",
+        as : "A" 
+    } 
+},
+{
+    $unwind : "$A"
+},
+{
+    "$project": {
+        "_id":0,
+        "B1": 1,
+        "B2": 1,
+        "B3": 1,
+        "A.A2": 1,
+    }
+}
+])

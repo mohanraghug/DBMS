@@ -1,0 +1,2 @@
+DBQuery.shellBatchSize = 10000000;
+db.B.aggregate([{$sort:{B3:1}}],{allowDiskUse: true})

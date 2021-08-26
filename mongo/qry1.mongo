@@ -1,0 +1,5 @@
+DBQuery.shellBatchSize = 10000000;
+
+db.A.find({
+    A1 : {$lte : 50} 
+})

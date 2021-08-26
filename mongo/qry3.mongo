@@ -1,0 +1,2 @@
+DBQuery.shellBatchSize = 10000000;
+db.B.count()/db.B.distinct("B2").length
